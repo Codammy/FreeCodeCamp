@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  height: 170vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+label{
+  font-size: 20px;
+}
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(46, 46, 171, 0.5), rgba(51, 51, 207, 0.5)),
+    url("https://unsplash.com/photos/n95VMLxqM2I");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contain-all {
+  margin-top: 56px;
+  height: fit-content;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65vw;
+}
+
+.header {
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+#title {
+  margin: 0 0 5px 0;
+}
+
+#survey-form {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 55vw;
+  background-color: #242344;
+  border-radius: 4px;
+  opacity: 0.93;
+}
+
+input {
+  color: grey;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.margin {
+  margin: 15px;
+  width: 80%;
+}
+.row{
+  display: flex;
+}
+.frm-grp1 {
+  margin-top: 45px;
+}
+
+.frm-grp1 input{
+  font-weight: 600;
+  width: 100%;
+  padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+}.frm-grp1 input:focus, select:focus{
+  outline-style: double;
+  outline-width: 5px;
+  outline-color: rgb(16, 120, 232);
+}
+
+select{
+  margin-top: 10px;
+  width: 95%;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 1em;
+  color: grey;
+  border-radius: 5px;
+  font-family: segoe script;
+}
+.frm-grp3 input{
+  margin: 7px;
+  width: 20px;
+  height: 20px;
+}
+.frm-grp3 p{ margin: 5px }
+.frm-grp5 input{
+  margin: 7px;
+  width: 20px;
+  height: 20px;
+}
+.frm-grp5 p{ margin: 5px }
+button{
+  width: 80%;
+  height: 7vh;
+  margin: 20px;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #37AF65;
+  color: beige;
+  border: none;
+}
+@media (max-width: 800px) {
+  h1{
+    font-size: 22px;
+  }
+  p {
+    font-size: 17px;
+  }
+textarea{
+  width: 80%;
+  height: 70px;
+}
+  #survey-form {
+    width: 80vw;
+  }
+}

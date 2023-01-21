@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+}
+i {
+  color: orangered;
+}
+#sec3 .box_container .box button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(255, 136, 17);
+  transition: 2s;
+}
+#sec4 form #submit:hover {
+  cursor: pointer;
+  background-color: rgb(255, 136, 17);
+  transition: 2s;
+}
+.contain_all {
+  display: flex;
+  flex-direction: column;
+}
+menu {
+  width: 100%;
+  position: fixed;
+  background-color: #eeeeee;
+  z-index: 99;
+}
+header {
+  width: 100%;
+  position: fixed;
+  background-color: #eeeeee;
+  z-index: 99;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  margin: 25px;
+}
+header #nav-bar a {
+  margin: 45px;
+  color: inherit;
+  font-size: 17px;
+  text-decoration: none;
+}
+#sec1 {
+  height: 65vh;
+}
+#sec1 .content {
+  display: flex;
+  justify-content: center;
+}
+#sec1 h4 {
+  margin: 30px 0 0 35px;
+}
+#video {
+  margin: 25px;
+}
+#sec2 {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sec2 .flex {
+  width: 60%;
+  display: flex;
+  margin: 60px 0 0 0;
+}
+#sec2 .flex:last-child {
+  margin: 60px 0 45px 0;
+}
+#sec2 .flex .mg {
+  margin: 0 0 0 55px;
+}
+.fa-solid {
+  width: 100px;
+}
+.txt {
+  width: 700px;
+}
+#sec3 {
+  height: 45vh;
+  text-align: center;
+}
+#sec3 .box_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sec3 .box_container .box {
+  height: 40vh;
+  width: 25vw;
+  margin: 25px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+#sec3 .box_container .box h2 {
+  background-color: grey;
+  padding: 10px;
+}
+#sec3 .box_container .box h3 {
+  padding: 10px;
+}
+#sec3 .box_container .box ul {
+  list-style: none;
+}
+#sec3 .box_container .box li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+#sec3 .box_container .box button {
+  background-color: orange;
+  padding: 7px;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+footer {
+  padding-top: 75px;
+  height: 19vh;
+  display: flex;
+  justify-content: center;
+}
+#sec4 {
+  height: inherit;
+  width: 75%;
+  background-color: #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sec4 form,
+#sec4 .contact {
+  margin: 30px;
+}
+#sec4 form {
+  line-height: 2em;
+  margin: 0 10px 15px 10px;
+}
+#sec4 .contact .link {
+  display: flex;
+}
+#sec4 form #email {
+  height: 30px;
+  width: fit-content;
+}
+#sec4 form #submit {
+  height: 30px;
+  width: 140px;
+  background-color: orange;
+  outline: none;
+  border: none;
+}
+#sec4 .contact a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+}
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    width: fit-content;
+  }
+  header {
+    flex-direction: column;
+  }
+  header img {
+    display: block;
+    margin: auto;
+    width: 250px;
+  }
+  header #nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header #nav-bar a {
+    margin: 7px 25px 0 25px;
+  }
+  header #nav-bar a i {
+    margin: 25px;
+  }
+  #sec1 .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #sec1 {
+    height: 90vh;
+  }
+  #video {
+    display: flex;
+    margin: 10px;
+    width: 66%;
+    height: 40vh;
+  }
+  #sec2 .flex{
+    width: 80%;
+    height: auto;
+  }
+  #sec3 {
+    height: auto;
+  }
+  #sec3 .box_container {
+    display: flex;
+    flex-direction: column;
+  }
+  #sec3 .box_container .box {
+    width: fit-content;
+    height: auto;
+  }
+  footer {
+    background-color: green;
+    width:fit-content;
+    height: auto;
+    padding: 30px 0 0 0;
+  }
+  #sec4 {
+    height: fit-content;
+    width: fit-content;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #sec4 form,
+  #sec4 form h3 {
+    line-height: normal;
+    margin: 7px;
+  }
+  #sec4 form input {
+    line-height: normal;
+    margin-top: 7px;
+  }
+  #sec4 .contact {
+    line-height: normal;
+    margin-right: 5px;
+  }
+}
+@media (max-width:400px) {
+}
+@media (max-width:1000px) {
+  video{
+    width: 45%;
+  }
+}

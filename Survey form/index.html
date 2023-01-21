@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+    <div class="contain-all">
+        <div class="header">
+          <h1 id="title">Customer Survey Form</h1>
+          <p id="description">
+            Thank you for taking the time to help us improve the platform
+          </p>
+        </div>
+        <form action="" id="survey-form">
+        <div class="frm-grp1 margin">
+            <label for="name" id="name-label">
+            Name
+            </label>
+            <input type="text" id="name" required placeholder="Full-Name"/>
+            <label for="" id="email-label">
+            Email
+            </label>
+            <input type="email" id="email" required placeholder="Email"/>
+            <label for="number" id="number-label">
+            Phone-no
+            </label>
+            <input type="number" id="number" min="10" max="13" required placeholder="Phone number"/>
+        </div>
+
+        <div class="frm-grp2 margin">
+            <p>How did you hear about us</p>
+            <select name="" id="dropdown">
+            <option value="" selected disabled>Choose How</option>
+            <option value="">
+            <p>Media</p>
+            </option>
+            <option value="">
+            <p>Family</p>
+            </option>
+            <option value="">
+            <p>Magazines</p>
+            </option>
+            <option value="">
+            <p>directly from our personel</p>
+            </option>
+            <option value="">
+            <p>other</p>
+            </option>
+            </select>
+          </div>
+
+        <div class="frm-grp3 margin">
+            <p>would you recommend us to your friends ?</p>
+            <div class="row">
+            <input type="radio" name="same" id="" />
+            <p>Definitely</p>
+            </div>
+            <div class="row">
+            <input type="radio" name="same" id="" />
+            <p>Maybe</p>
+            </div>
+            <div class="row">
+            <input type="radio" name="same" id="" />
+            <p>Not sure</p>
+            </div>
+        </div>
+
+        <div class="frm-grp4 margin">
+            <p>What Service was offered best to you ?</p>
+            <select name="" id="service">
+            <option value="" selected disabled>
+            Select
+            </option>
+            <option value="">
+             Tv Subscrition
+            </option>
+            <option value="">
+            Airtime Subscrition
+            </option>
+            <option value="">
+            Netflix
+            </option>
+            <option value="">
+            Data Subscrition
+            </option>
+            <option value="" id="other">
+            other
+            </option>
+            </select>
+        </div>
+
+        <div class="frm-grp5 margin">
+            <p>What would you like to see improve ?</p>
+            <div class="row">
+            <input type="checkbox" name="" id="" value="" />
+            <p>open source community</p>
+            </div>
+            <div class="row">
+            <input type="checkbox" name="" id="" value="" />
+            <p>Data Visualization</p>
+            </div>
+            <div class="row">
+            <input type="checkbox" name="" id="" value="" />
+            <p>Forum</p>
+            </div>
+            <div class="row">
+            <input type="checkbox" name="" id="" value="" />
+            <p>customer service</p>
+            </div>
+            <div class="row">
+            <input type="checkbox" name="" id="" value="" />
+            <p>response time</p>
+            </div>
+            <div class="row">
+            <input type="checkbox" name="" id="" value="" />
+            <p>help center</p>
+            </div>
+        </div>
+
+        <div class="frm-grp6 margin">
+            <p>Any comments or suggesttion ?</p>
+            <textarea name="" id="" cols="65" rows="6" placeholder="Enter a text here..." style="font-size: large;"></textarea>
+            </div>
+            <button id="submit" >Submit</button>
+      </form>
+    </div>
+    <!-- https://unsplash.com/photos/n95VMLxqM2I -->
+    <!-- https://unsplash.com/photos/fMntI8HAAB8 -->
+  </body>
+</html>

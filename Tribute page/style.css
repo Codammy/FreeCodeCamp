@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+main {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 25px;
+  width: 95%;
+  background-color: #eeeeee;
+  height: fit-content;
+}
+#title {
+  padding-top: 45px;
+}
+sup {
+  padding: 25px;
+}
+#img-div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 95%;
+  height: fit-content;
+}
+#img-caption {
+  margin: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+#img-div img {
+  height: auto;
+  width: 85%;
+  height: auto;
+}
+#tribute-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+#tribute-info h3 {
+  margin: 35px 0 35px 0;
+}
+#tribute-info ul {
+    width: 45vw;
+}
+#tribute-info ul li {
+  margin: 20px;
+  display: flex;
+  line-height: 1.5em;
+}
+#tribute-info ul h4 {
+  margin-right: 15px;
+}
+#tribute-info em {
+  width: 45vw;
+  line-height: 1.5em;
+}
+#wiki {
+  margin: 25px;
+}
+@media (max-width: 800px) {
+  #tribute-info ul {
+    width: 100%;
+  }
+  #tribute-info em {
+  width: 90%;
+}
+#wiki {
+    text-align: center;
+  margin: 25px;
+  font-size: 20px;
+}
+}
