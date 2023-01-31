@@ -3,27 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   max-width: 100%;
   height: auto;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Courier New', Courier, monospace
 }
+
 .chevrun_up {
   display: none;
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
   color: initial;
 }
+
 .contain_nav {
   position: relative;
   width: 24.7%;
 }
+
 nav {
   position: fixed;
   text-align: center;
@@ -32,121 +43,203 @@ nav {
   border-bottom: 2px solid rgba(0, 0, 0, 0.509);
   border-right: 2px solid grey;
 }
+
 nav header {
   padding: 20px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.509);
 }
+
 nav .relative_container {
   display: flex;
   flex-direction: column;
   height: 90vh;
   overflow-y: scroll;
 }
+
 nav .relative_container a {
   padding: 17px;
   color: rgb(3, 13, 35);
 }
+
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 75%;
 }
-.main-section p{
+
+p {
   margin: 25px 50px 0 60px;
   font-size: 15px;
   line-height: 1.5em;
   color: rgb(3, 13, 35);
 }
+
 .main-section header {
   margin: 20px 0 0 30px;
-  font-size: 25px;
+  font-size: 23px;
 }
-.main-section ul,ol {
-  margin: 15px 10px 5px 40px;
+
+.main-section ol,
+li {
+  margin: 15px 10px 5px 0;
 }
-.main-section ul, li, ol li{
+
+.main-section ul,
+li{
   margin: 15px 35px 10px 30px;
   line-height: 1.5em;
 }
-code{
-      display: block;
-      width: 75%;
-    white-space: pre-line;
-    /* position: relative; */
-    /* word-break: normal; */
-    /* word-wrap: normal; */
-    line-height: 1.5;
-    padding: 15px;
-    margin: auto;
-    border-radius: 8px;
+
+code {
+  display: block;
+  width: 75%;
+  white-space: pre-line;
+  /* position: relative; */
+  /* word-break: normal; */
+  /* word-wrap: normal; */
+  line-height: 1.5;
+  padding: 15px;
+  margin: auto;
+  border-radius: 8px;
 }
-/* code .background{color: #f7f7f7;} */
-.comment{color: rgb(30, 176, 30);}
-.keyword{color: blue;}
-.console{
+
+.comment {
+  color: rgb(30, 176, 30);
+}
+
+.keyword {
+  color: blue;
+}
+
+.console {
   color: white;
   background-color: rgba(0, 0, 0, 0.796);
 }
-.header_take_note_of{
+
+.code {
+  background-color: #f7f7f7;
+}
+
+.header_take_note_of {
   font-size: 20px;
   text-decoration: underline;
 }
-.code_summary{
+
+.code_summary {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-table{
+
+table {
   width: 75%;
 }
-tr th{
+
+tr th {
   border-top: 1px solid rgb(46, 46, 237);
   border-bottom: 1px solid rgb(46, 46, 237);
   padding: 5px;
 }
-tr td{
+
+tr td {
   font-family: monospace;
   color: brown;
   padding: 5px;
 }
-td:first-child{
+
+td:first-child {
   color: rgb(46, 46, 237);
 }
+
+footer {
+  font-family: monospace;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 25px;
+  width: 80%;
+  height: fit-content;
+  background-color: rgb(181, 175, 175);
+}
+
+footer p {
+  color: aliceblue;
+}
+
+footer p a {
+  text-decoration: underline;
+}
+
 @media (max-width: 800px) {
   Body {
     flex-direction: column;
   }
+
   header .chevrun_up {
     display: block;
     margin-right: 30px;
   }
+
   .contain_nav {
     z-index: 99;
     width: auto;
   }
+
   .contain_nav nav {
     width: 100%;
   }
+nav{position: unset;}
   nav header {
     background-color: white;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
   }
+
   nav .relative_container {
-    background-color: white;
-    transition: all;
+    height: 0;
+    transition: .4s;
+  }
+
+  .main-section header {
+    margin: 20px 0 0 30px;
+    font-size: 1.2em;
+  }
+
+  p {
+    margin: 10px 50px 0 60px;
+  }
+
+  .show_up {
+    transition: .5s;
+    background: white;
     display: flex;
+    flex-direction: column;
     height: 50vh;
     text-align: center;
+    overflow-y: scroll;
   }
-  .show_up {
-    display: none;
-  }
+
+  .show_up a {
+      padding: 10px;
+      color: rgb(3, 13, 35);
+    }
+
   main {
     height: fit-content;
     width: 100%;
   }
-  .text{
+
+  .text {
+    width: 100%;
+  }
+
+  tr th {
+    font-size: .7em;
+  }
+
+  footer {
     width: 100%;
   }
 }

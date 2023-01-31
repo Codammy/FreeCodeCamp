@@ -1,221 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/3c5dd8b0d1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="contain_nav">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Java documenatation page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java documentation page</title>
+  <script src="https://kit.fontawesome.com/3c5dd8b0d1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="contain_nav">
     <nav id="navbar">
-      <header><h3>Java Documentation</h3>
+      <header>
+        <h3>Java Documentation</h3>
         <div class="chevrun_up">
-      <i class="fa-solid fa-chevron-up"></i>
-      </div>
+          <i class="fa-solid fa-chevron-up"></i>
+        </div>
       </header>
-      <div class="relative_container"><hr>
-      <a href="#Introduction" id="nav-link">Introduction</a><hr>
-      <a href="#History" id="nav-link">History</a><hr>
-      <a href="#Java_OO_Programming_Concepts" id="nav-link">Java OOP Concepts</a><hr>
-      <a href="#OO_Programming_Concept" id="nav-link">Object oriented programming</a><hr>
-      <a href="#Java_is_platform_Independent" id="nav-link">Java is platform Independent</a><hr>
-      <a href="#Java_compilation" id="nav-link">Java compilation</a><hr>
-      <a href="#Programming_errors" id="nav-link">Programming Errors</a><hr>
-      <a href="#Programming_style" id="nav-link">Programming style</a><hr>
-      <a href="#Variables_&_identifiers" id="nav-link">Variables & Identifiers</a><hr>
-      <a href="#Data_Types_and_Operators" id="nav-link">Data Types and Operators *</a><hr>
-      <a href="#first_program" id="nav-link">First program: Hello World</a><hr>
-      <a href="#Take_note" id="nav-link">Special characters</a><hr>
-      <a href="#reading_from_the_console" id="nav-link">Reading inputs from the console</a><hr>
-      <a href="#" id="nav-link">Memory Concepts *</a><hr>
-      <a href="#" id="nav-link">Decision Making *</a><hr>
-      <a href="#" id="nav-link">Looping in Java *</a><hr>
-      <a href="#" id="nav-link">Reference</a><hr>
+      <div class="relative_container">
+        <hr>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <hr>
+        <a href="#Java_history" class="nav-link">Java history</a>
+        <hr>
+        <a href="#Java_OO_Programming_Concepts" class="nav-link">Java OOP Concepts</a>
+        <hr>
+        <a href="#OBJECT-ORIENTED_PROGRAMMING_(OOP)" class="nav-link">Object oriented programming</a>
+        <hr>
+        <a href="#Java_is_platform_Independent" class="nav-link">Java is platform Independent</a>
+        <hr>
+        <a href="#Java_compilation" class="nav-link">Java compilation</a>
+        <hr>
+        <a href="#Programming_style_&_Documentation" class="nav-link">Programming style</a>
+        <hr>
+        <a href="#Programming_errors" class="nav-link">Programming Errors</a>
+        <hr>
+        <a href="#Numeric_Data_Types_and_Operations" class="nav-link">Data Types and Operators</a>
+        <hr>
+        <a href="#Variables_&_identifiers" class="nav-link">Variables & Identifiers</a>
+        <hr>
+        <a href="#Your_First_Program_in_Java" class="nav-link">First program: Hello World</a>
+        <hr>
+        <a href="#Take_note" class="nav-link">Special characters</a>
+        <hr>
+        <a href="#Displaying_text_with_printf" class="nav-link">Displaying text with printf</a>
+        <hr>
+        <a href="#Reading_input_from_the_console" class="nav-link">Reading inputs from the console</a>
+        <hr>
+        <a href="#Memory_Concepts" class="nav-link">Memory Concepts</a>
+        <hr>
+        <a href="#Equality_and_Relational_Operators" id="nav-link">Equality and Relational Operators</a><hr>
+        <a href="#Assignment,increment_and_decrement_operators" id="nav-link">Assignment increment and decrement Operators</a>
+        <hr>
+        <a href="#Loops_in_Java" class="nav-link">Loops in Java</a>
+        <hr>
+        <a href="#Reference" class="nav-link">Reference</a>
+        <hr>
       </div>
-      <script>
-        const navg = document.querySelector('.chevrun_up');
-        const show_up= navg.parentElement.nextElementSibling;
-        const ico = navg.firstElementChild;
-        
-        const greaterWidth = () => {
-          if (window.innerWidth >= 1000)
-          show_up.classList.add('relative_container');
-        }
-        setInterval(greaterWidth, 1000);
-        const lessWidth = () => {
-          if (window.innerWidth <= 800)
-          {
-          show_up.classList.remove('relative_container');
-            show_up.classList.add('show_up');
-          }
-        }
-        var finterval = setInterval(lessWidth, 1000);
-
-        navg.onclick = () =>{
-          clearInterval(finterval);
-          console.log(ico);
-          ico.classList.toggle('fa-chevron-up');
-          ico.classList.toggle('fa-chevron-down');
-          show_up.classList.toggle('show_up');
-          show_up.classList.toggle('relative_container');
-          }
-        console.log(show_up);
-      </script>
     </nav>
-    </div>
-    <main id="main-doc">
-      <section class="main-section" id="Introduction">
-        <header id="Introduction">Introduction</header>
-        <div class="note">
-        <p>Java (with a capital J) is a high-level, third generation programming language, like C, Fortran, Smalltalk, Perl, and many others. You can use Java to write computer applications that crunch numbers, process words, play games, store data or do any of the thousands of other things computer software can do. Compared to other programming languages, Java is most similar to C.</p><p> However although Java shares much of C's syntax, it us not C. knowing how to program in C or, better yet, C++, will certainly help you to learn Java more quickly, but you don't need to know C to learn Java. Unlike C++ Java is not a superset of C.</p><p> A Java compiler won't compile C code, and most large C programs need to be changed substantially before they can run as Java programs.
-</p></div>
-      </section>
-      <section class="main-section" id="History">
-        <header id="Java history">Java history</header>
-        <div class="note">
-        <p>The Java language was designed at sun microsystem over 16 year period culminating in its first release in January 1996. The developers led by James Gosling, originally set out to build a language for controlling simple home devices with embedding microcomputers.</p> <p>Thus, they started with the object-oriented concepts of C++, simplified it, and removed some of the features, such as pointers, that lead to serious programming errors. while the team may have originally had in mind compiling this language for a specific microprocessor, instead they developed both the java language and a hypothetical processor called the Java Virtual Machine or JVM rather than on a PC or sun workstation.</p> <p> The team's working name for this evolving language was “oak”, but as it neared completion, they found that oak was already registered as a trademark. As the story goes, they came up with the name “Java” while taking a break at a coffee shop.
-</p></div>
-      </section>
-      <section class="main-section" id="Java_OO_Programming_Concepts">
-        <header id="OO_Programming_Concepts">Java OO Programming Concepts</header>
-        <div class="note">
-        <p>Object-Oriented programming (OOP) involves programming using objects. An object represents an entity in the real world that can be distinctly identified. For example a student, a desk, a circle, a button, and even a loan can all be viewed as objects.</p><p> An object has a unique identity, <b>state</b>, and <b>behaviour</b> The state of an object consists of a set of data fields (also known as properties) with their current values. The behavior of an object is defined by set of methods.
+  </div>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header id="Introduction">Introduction</header>
+      <div class="note">
+        <p>Java (with a capital J) is a high-level, third generation programming language, like C, Fortran, Smalltalk,
+          Perl, and many others. You can use Java to write computer applications that crunch numbers, process words,
+          play games, store data or do any of the thousands of other things computer software can do. Compared to other
+          programming languages, Java is most similar to C.</p>
+        <p> However although Java shares much of C's syntax, it us not C. knowing how to program in C or, better yet,
+          C++, will certainly help you to learn Java more quickly, but you don't need to know C to learn Java. Unlike
+          C++ Java is not a superset of C.</p>
+        <p> A Java compiler won't compile C code, and most large C programs need to be changed substantially before they
+          can run as Java programs.
+        </p>
+      </div>
+    </section>
+    <section class="main-section" id="Java_history">
+      <header id="Java_history">Java history</header>
+      <div class="note">
+        <p>The Java language was designed at sun microsystem over 16 year period culminating in its first release in
+          January 1996. The developers led by James Gosling, originally set out to build a language for controlling
+          simple home devices with embedding microcomputers.</p>
+        <p>Thus, they started with the object-oriented concepts of C++, simplified it, and removed some of the features,
+          such as pointers, that lead to serious programming errors. while the team may have originally had in mind
+          compiling this language for a specific microprocessor, instead they developed both the java language and a
+          hypothetical processor called the Java Virtual Machine or JVM rather than on a PC or sun workstation.</p>
+        <p> The team's working name for this evolving language was “oak”, but as it neared completion, they found that
+          oak was already registered as a trademark. As the story goes, they came up with the name “Java” while taking a
+          break at a coffee shop.
+        </p>
+      </div>
+    </section>
+    <section class="main-section" id="Java_OO_Programming_Concepts">
+      <header id="Java_OO_Programming_Concepts">Java OO Programming Concepts</header>
+      <div class="note">
+        <p>Object-Oriented programming (OOP) involves programming using objects. An object represents an entity in the
+          real world that can be distinctly identified. For example a student, a desk, a circle, a button, and even a
+          loan can all be viewed as objects.</p>
+        <p> An object has a unique identity, <b>state</b>, and <b>behaviour</b> The state of an object consists of a set
+          of data fields (also known as properties) with their current values. The behavior of an object is defined by
+          set of methods.
 
-</p>
-<ul><li>Classes: <br> People, book, dogs, cats, cars, airplanes, trains, etc.
-</li>
-<li>Instance of class: <br> People, book, dogs, cats, cars, airplanes, trains, etc.
-</li></ul>
-</div>
-</section>
-      <section class="main-section" id="OO_Programming_Concept">
-        <header id="OBJECT-ORIENTED-PROGRAMMING-(OOP)">OBJECT-ORIENTED PROGRAMMING (OOP)</header><div class="note">
-        <p>OOP represents an attempt to make programs more closely model the way people think about and deal with the world. In the older style of programming, a programmer who is faced with some problems must identify a computing task that need to be performed in order to solve the problem. Programming then consist of finding a sequence of instruction that will accomplish that tasks. But the heart of object-oriented programming, instead of task we fine object-entities that have behaviors, that holds information, and that can interact with another. Programming consists of design set of objects that model the problem domain. This sis supposed to make the design of the program more natural and hence easier to get right and easier to understand. An object-oriented programming language such as JAVA includes a number of features that make it very different from a standard language. In order to make effective use of these features, you have to “orient” your thinking correctly. In object-oriented programs data is represented by objects, objects have two sections, fields (instance) and methods. Fields tell you what an object is. Method tells you what an object does. These field and methods are closely tied to the objects real world characteristics and behavior. When a message it responds accordingly as defined by its methods.
-</p>
-<p>Object oriented programming is alleged to have a number of advantages including:
-</p>
-<ul>
-  <li>Simpler, Easier, to read programs</li>
-  <li>More effective reuse of code</li>
-  <li>Faster time to market</li>
-  <li>More robust error-free code</li>
-</ul>
-<p>An object-oriented programming language provides support for the following object-oriented concepts:
-</p>
-<ul>
-  <li>Objects and Classes</li>
-  <li>Encapsulation</li>
-  <li>Inheritance</li>
-  <li>Polymorphism and Dynamic binding</li>
-</ul>
-<div class="definition">
-  <h4 style="margin-left: 50px;">What does this means 😤👆👆</h4>
-  <ul>
-  <li><b style="text-decoration: underline;">Encapsulation</b> is a process of hiding or wrapping the data and the code that operates on the data into a simple entity. This keeps the data safe from outside interface and misuse. One way to think about encapsulation is a protective wrapper that prevent code and data from being arbitrarily accessed by other code defined outside the wrapper.</li>
-<li><b style="text-decoration: underline;">Inheritance</b> is the process by which one object acquires the properties of another object</li>
-<li>The meaning of <b style="text-decoration: underline;">Polymorphism</b> is something like one name many forms. Polymorphism enables one entity to be use as general category for different types of actions. The specific action is determined by the exert nature of the situation. The concept of polymorphism can be explained as ”one interface, multiple methods”.</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="main-section" id="Java_is_platform_Independent">
-  <header id="Java_is_platform_Independent">Java is platform Independent </header>
-  <p>Java was designed to not only be cross-platform in source form like C, but also in compiled binary form. Since this is frankly impossible across processor architecture. Java is compiled to an intermediate form called byte-code. A java program never really execute natively on the host machine. Rather a special native program called the Java interpreter reads the byte-code and executes the corresponding native machine instructions. Thus to port Java programs to a new platform all that is needed is to port the interpreter and some of the library routines. Even the compiler is written in Java. The byte code are precisely defined, and remain the same on all platforms.</p>
-<p>The second important part of making Java cross-platform is the elimination of undefined or architecture dependent constructs. Integers are always four bytes long, and floating point variables follow the <span style="color: crimson;"> IEEE 754</span> standard for computer arithmetic exactly. You don't have to worry that the meaning of an integer is going to change if you move from a Pentium to a PowerPC. In Java everything is guaranteed.
-However the virtual machine itself and some parts of the class library must be written in native code. These are not always as easy as or quick to port as pure Java programs.
-Hence, Java is regarded as write once, run anywhere <b>(WORA)</b>.
-</p>
-</section>
-      <section class="main-section" id="Java compilation">
-        <header id="Java_compilation">Java compilation</header><div class="note">
-        <p>There are two ways of creating, compiling and executing a java program after the jdk must have been installed on the computer system
-</p>
-<ol>
-  <li> 
-    <p><span class="header_take_note_of">Using any text editor like notepad, notepad++ etc.</span><br>
-    Using any text editor like notepad, notepad++ etc.  to create and edit a Java source-code file and then compiling and executing the code from the command prompt. . The source file must end with the extension .java and must have the same exact name as the public class name. If there aren't any syntax errors, the compiler generates a bytecode file with a .class extension.
-</p><p><bold>NB:</bold> Before the java source code file can be compiled and executed from the command prompt, the classpath or the system path environment variable must be set
-</p></li>
-  <li><p><span class="header_take_note_of"> Use a Java development tool (e.g., NetBeans, Eclipse, and TextPad) </span><br> Editing, compiling, building, debugging, and online help are integrated in one graphical user interface. You simply enter source code in one window or open an existing file in a window, and then click a button or menu item or press a function key to compile and run the program.
-</p></li>
-</ol>
-         </div>
-      </section>
-      <section class="main-section" id="Programming_style">
-  <header id="Programming_errors">Programming style & Documentation</header>
-  <article>
-    <p>
-    Good programming style and proper documentation make a program easy to read and help programmers prevent errors.
-Programming style deals with what programs look like. A program can compile and run properly even if written on only one line, but writing it all on one line would be bad programming style because it would be hard to read. Documentation is the body of explanatory remarks and comments pertaining to a program. Programming style and documentation are as important as coding. Good programming style and appropriate documentation reduce the chance of errors and make programs easy to read.
-</p>
-    <p>
-      <ol>
-        <li>Appropriate Comments and Comment Styles</li>
-        <li>Proper Indentation and Spacing
-</li>
-        <li>Block Styles: A block is a group of statements surrounded by braces. There are two popular styles, next-line style and end-of-line style, as shown below.
-</li>
-      </ol>
-    </p>
-  </article>
-</section>
-      <section class="main-section" id="Programming_errors">
-  <header id="Programming_errors">Programming errors</header>
-  <article>
-    <p><span class=".header_take_note_of"> Syntax Errors</span><br>
-Errors that are detected by the compiler are called syntax errors or compile errors. Syntax
-errors result from errors in code construction, such as mistyping a keyword, omitting some
-necessary punctuation, or using an opening brace without a corresponding closing brace.
-These errors are usually easy to detect because the compiler tells you where they are and
-what caused them.</p>    
-<p><span class="header_take_note_of">Logic errors</span><br>logic errors occur when a program does not perform the way it was intended to. Errors of this kind occur for many different reasons.
-Example: Write a program with a wrong formula
-</p>
-<p><span class="header_take_note_of">Logic errors</span><br>logic errors occur when a program does not perform the way it was intended to. Errors of this kind occur for many different reasons.
-Example: Write a program with a wrong formula
-</p>
-<p><span class="header_take_note_of">Common Errors</span><br>
-<ul>
-  <li>Common Error 1: Missing Braces
-</li>
-  <li>Common Error 2: Missing Semicolons
-</li>
-  <li>Common Error 3: Missing Quotation Marks
-</li>
-  <li>Common Error 4: Misspelling Names</li>
-</ul>
-</p>
-  </article>
-</section>
-<section class="main-section" id="Variables_&_identifiers">
-  <header id="Variables_&_identifiers">Variables & identifiers</header>
-  <div class="note"><p>
-    <span class="header_take_note_of">Identifiers</span><br>
-    Identifiers are the names that identify the elements such as classes, methods, and variables in a program. Identifiers are for naming variables, methods, classes, and other items in a program.
-Descriptive identifiers make programs easy to read. Avoid using abbreviations for identifiers.
-All identifiers must obey the following rules:
-<ul>
-  <li>An identifier is a sequence of characters that consists of letters, digits, underscores
-(_), and dollar signs ($).</li>
-  <li>An identifier must start with a letter, an underscore (_), or a dollar sign ($). It cannot start with a digit.</li>
-  <li>An identifier cannot be a reserved word. (See Appendix A for a list of reserved words.)</li>
-  <li>An identifier cannot be true, false, or null.</li>
-  <li>An identifier can be of any length.</li>
-  <b>NB: <i>Since Java is case sensitive, area, Area, and AREA are all different identifiers.</i></b>
-</ul>
-  </p>
-<p>
-  <span class="header_take_note_of">Variables</span><br>
-    Variables are used to represent values that may be changed in the program. Variables are for representing data of a certain type. To use a variable, you declare it by telling the compiler its name as well as what type of data it can store. The variable declaration tells the compiler to allocate appropriate memory space for the variable based on its data type. <br>
-<b> The syntax for declaring a variable is:</b>
-datatype variableName;
-</p>
-<p>
-  <b>Here are some examples of variable declarations:</b><br>
-  <code style="margin-top: -10px;">
+        </p>
+        <ul>
+          <li>Classes: <br> People, book, dogs, cats, cars, airplanes, trains, etc.
+          </li>
+          <li>Instance of class: <br> People, book, dogs, cats, cars, airplanes, trains, etc.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="main-section" id="OBJECT-ORIENTED-PROGRAMMING_(OOP)">
+      <header id="OBJECT-ORIENTED_PROGRAMMING_(OOP)">OBJECT-ORIENTED PROGRAMMING (OOP)</header>
+      <div class="note">
+        <p>OOP represents an attempt to make programs more closely model the way people think about and deal with the
+          world. In the older style of programming, a programmer who is faced with some problems must identify a
+          computing task that need to be performed in order to solve the problem. Programming then consist of finding a
+          sequence of instruction that will accomplish that tasks. But the heart of object-oriented programming, instead
+          of task we fine object-entities that have behaviors, that holds information, and that can interact with
+          another. Programming consists of design set of objects that model the problem domain. This sis supposed to
+          make the design of the program more natural and hence easier to get right and easier to understand. An
+          object-oriented programming language such as JAVA includes a number of features that make it very different
+          from a standard language. In order to make effective use of these features, you have to “orient” your thinking
+          correctly. In object-oriented programs data is represented by objects, objects have two sections, fields
+          (instance) and methods. Fields tell you what an object is. Method tells you what an object does. These field
+          and methods are closely tied to the objects real world characteristics and behavior. When a message it
+          responds accordingly as defined by its methods.
+        </p>
+        <p>Object oriented programming is alleged to have a number of advantages including:
+        </p>
+        <ul>
+          <li>Simpler, Easier, to read programs</li>
+          <li>More effective reuse of code</li>
+          <li>Faster time to market</li>
+          <li>More robust error-free code</li>
+        </ul>
+        <p>An object-oriented programming language provides support for the following object-oriented concepts:
+        </p>
+        <ul>
+          <li>Objects and Classes</li>
+          <li>Encapsulation</li>
+          <li>Inheritance</li>
+          <li>Polymorphism and Dynamic binding</li>
+        </ul>
+        <div class="definition">
+          <h4 style="margin-left: 50px;">What does this means 😤👆👆</h4>
+          <ul>
+            <li><b style="text-decoration: underline;">Encapsulation</b> is a process of hiding or wrapping the data and
+              the code that operates on the data into a simple entity. This keeps the data safe from outside interface
+              and misuse. One way to think about encapsulation is a protective wrapper that prevent code and data from
+              being arbitrarily accessed by other code defined outside the wrapper.</li>
+            <li><b style="text-decoration: underline;">Inheritance</b> is the process by which one object acquires the
+              properties of another object</li>
+            <li>The meaning of <b style="text-decoration: underline;">Polymorphism</b> is something like one name many
+              forms. Polymorphism enables one entity to be use as general category for different types of actions. The
+              specific action is determined by the exert nature of the situation. The concept of polymorphism can be
+              explained as ”one interface, multiple methods”.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Java_is_platform_Independent">
+      <header id="Java_is_platform_Independent">Java is platform Independent </header>
+      <p>Java was designed to not only be cross-platform in source form like C, but also in compiled binary form. Since
+        this is frankly impossible across processor architecture. Java is compiled to an intermediate form called
+        byte-code. A java program never really execute natively on the host machine. Rather a special native program
+        called the Java interpreter reads the byte-code and executes the corresponding native machine instructions. Thus
+        to port Java programs to a new platform all that is needed is to port the interpreter and some of the library
+        routines. Even the compiler is written in Java. The byte code are precisely defined, and remain the same on all
+        platforms.</p>
+      <p>The second important part of making Java cross-platform is the elimination of undefined or architecture
+        dependent constructs. Integers are always four bytes long, and floating point variables follow the <span
+          style="color: crimson;"> IEEE 754</span> standard for computer arithmetic exactly. You don't have to worry
+        that the meaning of an integer is going to change if you move from a Pentium to a PowerPC. In Java everything is
+        guaranteed.
+        However the virtual machine itself and some parts of the class library must be written in native code. These are
+        not always as easy as or quick to port as pure Java programs.
+        Hence, Java is regarded as write once, run anywhere <b>(WORA)</b>.
+      </p>
+    </section>
+    <section class="main-section" id="Java_compilation">
+      <header id="Java_compilation">Java compilation</header>
+      <div class="note">
+        <p>There are two ways of creating, compiling and executing a java program after the jdk must have been installed
+          on the computer system
+        </p>
+        <ol>
+          <li>
+            <p><span class="header_take_note_of">Using any text editor like notepad, notepad++ etc.</span><br>
+              Using any text editor like notepad, notepad++ etc. to create and edit a Java source-code file and then
+              compiling and executing the code from the command prompt. . The source file must end with the extension
+              .java and must have the same exact name as the public class name. If there aren't any syntax errors, the
+              compiler generates a bytecode file with a .class extension.
+            </p>
+            <p>
+              <bold>NB:</bold> Before the java source code file can be compiled and executed from the command prompt,
+              the classpath or the system path environment variable must be set
+            </p>
+          </li>
+          <li>
+            <p><span class="header_take_note_of"> Use a Java development tool (e.g., NetBeans, Eclipse, and TextPad)
+              </span><br> Editing, compiling, building, debugging, and online help are integrated in one graphical user
+              interface. You simply enter source code in one window or open an existing file in a window, and then click
+              a button or menu item or press a function key to compile and run the program.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="main-section" id="Programming_style_&_Documentation">
+      <header id="Programming_style_&_Documentation">Programming style & Documentation</header>
+      <article>
+        <p>
+          Good programming style and proper documentation make a program easy to read and help programmers prevent
+          errors.
+          Programming style deals with what programs look like. A program can compile and run properly even if written
+          on only one line, but writing it all on one line would be bad programming style because it would be hard to
+          read. Documentation is the body of explanatory remarks and comments pertaining to a program. Programming style
+          and documentation are as important as coding. Good programming style and appropriate documentation reduce the
+          chance of errors and make programs easy to read.
+        </p>
+        <p>
+        <ol>
+          <li>Appropriate Comments and Comment Styles</li>
+          <li>Proper Indentation and Spacing
+          </li>
+          <li>Block Styles: A block is a group of statements surrounded by braces. There are two popular styles,
+            next-line style and end-of-line style, as shown below.
+          </li>
+        </ol>
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Programming_errors">
+      <header id="Programming_errors">Programming errors</header>
+      <article>
+        <p><span class="header_take_note_of"> Syntax Errors</span><br>
+          Errors that are detected by the compiler are called syntax errors or compile errors. Syntax
+          errors result from errors in code construction, such as mistyping a keyword, omitting some
+          necessary punctuation, or using an opening brace without a corresponding closing brace.
+          These errors are usually easy to detect because the compiler tells you where they are and
+          what caused them.</p>
+        <p><span class="header_take_note_of">Logic errors</span><br>logic errors occur when a program does not perform
+          the way it was intended to. Errors of this kind occur for many different reasons.
+          Example: Write a program with a wrong formula
+        </p>
+        <p><span class="header_take_note_of">Logic errors</span><br>logic errors occur when a program does not perform
+          the way it was intended to. Errors of this kind occur for many different reasons.
+          Example: Write a program with a wrong formula
+        </p>
+        <p><span class="header_take_note_of">Common Errors</span><br>
+        <ul>
+          <li>Common Error 1: Missing Braces
+          </li>
+          <li>Common Error 2: Missing Semicolons
+          </li>
+          <li>Common Error 3: Missing Quotation Marks
+          </li>
+          <li>Common Error 4: Misspelling Names</li>
+        </ul>
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Data_Types_and_Operators">
+      <header id="Numeric_Data_Types_and_Operations">Numeric Data Types and Operations</header>
+      <article>
+        <p><i>Java has six numeric types for integers and floating-point numbers</i><br>
+        </p>
+        <p><span class="header_take_note_of">Numeric Types</span><br>
+          Every data type has a range of values. The compiler allocates memory space for each variable or constant
+          according to
+          its data type. Java provides eight primitive data types for numeric values, characters, and Boolean values</p>
+        <p><span class="header_take_note_of">Arithmetic</span><br>
+          Most programs perform arithmetic calculations. The<span style="color: crimson;">arithmetic operators</span>
+          are summarized in the Figure below. Note the use
+          of various special symbols not used in algebra. The <span style="color: crimson;">asterisk</span>
+          (*) indicates multiplication, and the percent sign (%) is the <span style="color: crimson;">remainder
+            operator</span>, which
+          we'll discuss shortly. The arithmetic operators in Fig. 2.11 are binary operators, because
+          each operates on two operands. For example, the expression f + 7 contains the binary operator + and the two
+          operands f
+          and 7.</p>
+        <summary class="code_summary">
+          <table>
+            <thead style="text-align: left;">
+              <tr>
+                <th>Java operation</th>
+                <th>Operator</th>
+                <th>Algebraic expression</th>
+                <th>Java expression</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Addition</td>
+                <td>+</td>
+                <td>f + 7</td>
+                <td>f + 7</td>
+              </tr>
+              <tr>
+                <td>Subtraction</td>
+                <td>-</td>
+                <td>p - c</td>
+                <td>p - c</td>
+              </tr>
+              <tr>
+                <td>Multiplication</td>
+                <td>*</td>
+                <td>bm</td>
+                <td>b * m</td>
+              </tr>
+              <tr>
+                <td>Division</td>
+                <td>/</td>
+                <td>x / y or x ÷ y</td>
+                <td>x / y</td>
+              </tr>
+              <tr>
+                <td>Remainder</td>
+                <td>%</td>
+                <td>r mod s</td>
+                <td>r % s</td>
+              </tr>
+            </tbody>
+            <i>Arithmetic Operators</i>
+          </table>
+          We will discuss more on operators in the later chapters.
+        </summary>
+        <p><span class="header_take_note_of">Rules of Operator Precedence</span><br>
+          Java applies the operators in arithmetic expressions in a precise sequence determined by the
+          rules of operator precedence, which are generally the same as those followed in algebra:
+          1. Multiplication, division and remainder operations are applied first. If an expression contains several such
+          operations, they're applied from left to right. Multiplication, division and remainder operators have the same
+          level of
+          precedence.
+          2. Addition and subtraction operations are applied next. If an expression contains
+          several such operations, the operators are applied from left to right. Addition and
+          subtraction operators have the same level of precedence.</p>
+        <summary class="code_summary">
+          <table>
+            <thead style="text-align: center;">
+              <tr>
+                <th style="width: 27%;">Java operation</th>
+                <th>Operator</th>
+                <th>Algebraic expression</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>* <br> / <br> %</td>
+                <td>Multiplication <br> Division <br> Remainder</td>
+                <td>Evaluated first. if there are several operators of this type, they're evaluated from left to right.
+                </td>
+              </tr>
+              <tr>
+                <td>+ <br> -</td>
+                <td>Additon <br> Subtraction</td>
+                <td>Evaluated first. if there are several operators of this type, they're evaluated from left to right.
+                </td>
+              </tr>
+              <tr>
+                <td>=</td>
+                <td>Assignment</td>
+                <td>Evaluated last</td>
+              </tr>
+            </tbody>
+          </table>
+        </summary>
+        <p>
+          <span style="color: blue;">Sample Algebraic and Java Expressions</span><br>
+          Now let's consider several expressions in light of the rules of operator precedence. Each
+          example lists an algebraic expression and its Java equivalent. The following is an example
+          of an arithmetic mean (average) of five terms:
+          <code>
+        <i>Algebra:      m = a + b + c + d + e</i>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>______________</sup>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5
+        <i>Java:         m = ( a + b + c + d + e ) / 5;</i>   
+      </code>
+          The parentheses are required because division has higher precedence than addition. The
+          entire quantity (a + b + c + d + e) is to be divided by 5. If the parentheses are erroneously
+          omitted, we obtain a + b + c + d + e / 5, which evaluates as
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Variables_&_identifiers">
+      <header id="Variables_&_identifiers">Variables & identifiers</header>
+      <div class="note">
+        <p>
+          <span class="header_take_note_of">Identifiers</span><br>
+          Identifiers are the names that identify the elements such as classes, methods, and variables in a program.
+          Identifiers are for naming variables, methods, classes, and other items in a program.
+          Descriptive identifiers make programs easy to read. Avoid using abbreviations for identifiers.
+          All identifiers must obey the following rules:
+        <ul>
+          <li>An identifier is a sequence of characters that consists of letters, digits, underscores
+            (_), and dollar signs ($).</li>
+          <li>An identifier must start with a letter, an underscore (_), or a dollar sign ($). It cannot start with a
+            digit.</li>
+          <li>An identifier cannot be a reserved word. (See Appendix A for a list of reserved words.)</li>
+          <li>An identifier cannot be true, false, or null.</li>
+          <li>An identifier can be of any length.</li>
+          <b>NB: <i>Since Java is case sensitive, area, Area, and AREA are all different identifiers.</i></b>
+        </ul>
+        </p>
+        <p>
+          <span class="header_take_note_of">Variables</span><br>
+          Variables are used to represent values that may be changed in the program. Variables are for representing data
+          of a certain type. To use a variable, you declare it by telling the compiler its name as well as what type of
+          data it can store. The variable declaration tells the compiler to allocate appropriate memory space for the
+          variable based on its data type. <br>
+          <b> The syntax for declaring a variable is:</b>
+          datatype variableName;
+        </p>
+        <p>
+          <b>Here are some examples of variable declarations:</b><br>
+          <code style="margin-top: -10px;">
     <span class="keyword">int </span>count; 		<span class="comment">// Declare count to be an integer variable</span>
 <span class="keyword">double </span>radius; 		<span class="comment">// Declare radius to be a double variable</span>
  <span class="keyword">float </span> interestRate; 	<span class="comment">// Declare interestRate to be a double variable</span>
@@ -223,8 +426,8 @@ datatype variableName;
  <span class="keyword">string </span> interestRate; 	<span class="comment">// Declare interestRate to be a double variable</span>
  <span class="keyword">boolean </span> interestRate; 	<span class="comment">// Declare interestRate to be a double variable</span>
   </code>
-  If variables are of the same type, they can be declared together, as follows:
-  <code style="margin-top: -30px;">
+          If variables are of the same type, they can be declared together, as follows:
+          <code style="margin-top: -30px;">
 <span class="keyword">int </span>count, age, amount;
 <span class="keyword">double </span>score, ,count, interestRate;
 <span class="keyword">float </span>score, decimal, gp;
@@ -232,10 +435,10 @@ datatype variableName;
 <span class="keyword">string </span>name, school, occupation;
 <span class="keyword">boolean </span>married, isTall, isRich;
   </code>
-</p>
-<p>
-  <b>Variables assignments:</b><br>
-    <code style="margin-top: 10px; background-color: #f7f7f7;">
+        </p>
+        <p>
+          <b>Variables assignments:</b><br>
+          <code style="margin-top: 10px; background-color: #f7f7f7;">
       <span class="comment">// Assigning age an integer variable</span>
     <span class="keyword">int </span>age = 23;
 
@@ -254,23 +457,29 @@ datatype variableName;
  <span class="comment">// Assigning isAprogrammer a boolean variable</span>
  <span class="keyword">boolean </span> isAprogrammer = true;
   </code>
-</p>
-<p>
-  <span class="#Take_note">Named Constants</span><br>
-A named constant is an identifier that represents a permanent value.
-The value of a variable may change during the execution of a program, but a named constant, or simply constant, represents permanent data that never changes.
-The syntax for declaring a constant is:
-final  datatype  CONSTANTNAME = value;
-
-A constant must be declared and initialized in the same statement. The word final is a Java keyword for declaring a constant. For example, you can declare p as a constant
-</p>
-</div>
-</section>
-<section class="main-section" id="first_program">
-  <header id="Your_First_Program_in_Java">Your First Program in Java </header>
-  <p>A Java application is a computer program that executes when you use the java command to launch the Java Virtual Machine (JVM). Later in this section we'll discuss how to compile and run a Java application. First we consider a simple application that displays a line of text. Figure 2.1 shows the program followed by a box that displays its output. The program includes line numbers. We've added these for instructional purposes - they're not part of a Java program. This example illustrates several important Java features. We'll see that line 9 does the the real work displaying the phrase test to Java Programming! on the screen.
-</p>
-<code>
+        </p>
+        <p>
+          <span class="#Take_note">Named Constants</span><br>
+          A named constant is an identifier that represents a permanent value.
+          The value of a variable may change during the execution of a program, but a named constant, or simply
+          constant, represents permanent data that never changes.
+          The syntax for declaring a constant is:
+          <b style="color: blue">final</b> datatype CONSTANTNAME = value;
+          A constant must be declared and initialized in the same statement. The word final is a Java keyword for
+          declaring a constant. For example, you can declare p as a constant
+        </p>
+      </div>
+    </section>
+    <section class="main-section" id="Your_First_Program_in_Java">
+      <header id="Your_First_Program_in_Java">Your First Program in Java </header>
+      <p>A Java application is a computer program that executes when you use the java command to launch the Java Virtual
+        Machine (JVM). Later in this section we'll discuss how to compile and run a Java application. First we consider
+        a simple application that displays a line of text. Figure 2.1 shows the program followed by a box that displays
+        its output. The program includes line numbers. We've added these for instructional purposes - they're not part
+        of a Java program. This example illustrates several important Java features. We'll see that line 9 does the the
+        real work displaying the phrase test to Java Programming! on the screen.
+      </p>
+      <code class="code">
   <span class="comment">//Fig 2.1: test.java
 //Text-printing program</span>
 
@@ -282,65 +491,173 @@ public static void main(String[] args)
     } <span class="comment">// end method main</span>
 }<span class="comment"> // end class test </span>
 </code>
-<code class="console">Hello World!</code>
-</section>
-<section class="main-section" id="Take_note">
-  <header id="Take_note_of">Take note</header>
-<article>
-  <p><span class="header_take_note_of"> LINE 1&2: Commenting Your Programs</span> <br>
-  We insert <span style="color: rgb(255, 0, 128);">comments</span>  to <span style="color: rgb(255, 0, 128);">document programs</span> and improve their readability. The Java compiler ignores comments, so they do not cause the computer to perform any action when the program is run. An end-of-line comment need not begin a line; it also can begin in the middle of a line and continue until the end (as in lines 10 and 11). Line 2 is a comment that describes the purpose of the program.
-Java also has traditional comments, which can be spread over several lines as in 👇</p>
-<code style="background-color: #f7f7f7;" class="comment">/*This is a traditional comment. it can be split over multiple line. */
+      <code class="console">Hello World!</code>
+    </section>
+    <section class="main-section" id="Take_note">
+      <header id="Take_note">Take note</header>
+      <article>
+        <p><span class="header_take_note_of"> LINE 1&2: Commenting Your Programs</span> <br>
+          We insert <span style="color: rgb(255, 0, 128);">comments</span> to <span
+            style="color: rgb(255, 0, 128);">document programs</span> and improve their readability. The Java compiler
+          ignores comments, so they do not cause the computer to perform any action when the program is run. An
+          end-of-line comment need not begin a line; it also can begin in the middle of a line and continue until the
+          end (as in lines 10 and 11). Line 2 is a comment that describes the purpose of the program.
+          Java also has traditional comments, which can be spread over several lines as in 👇</p>
+        <code style="background-color: #f7f7f7;" class="comment">/*This is a traditional comment. it can be split over multiple line. */
 </code>
-<p><span class="header_take_note_of"> Line 3: Using Blank Lines </span><br>
-Line 3 is a blank line. Blank lines, space characters and tabs make programs easier to read. Together, they're known as whitespace (or whitespace). The compiler ignores white space.</p>
-<p><span class="header_take_note_of"> Line 4: Declaring a Class </span><br>
-Line 4 begins a class declaration for class test. Every Java program consists of at least one class that you (the programmer) define. The class keyword introduces a class declaration and is immediately followed by the class name (test). Keywords (sometimes called reserved words) are reserved for use by Java and are always spelled with all lowercase letters.
-NB: A public class must be placed in a file that has the same name as the class (in terms of both spelling and capitalization) plus the .java extension; otherwise, a compilation error occurs. For example, public class test must be placed in a file named test.java. The classname and filename must be the same (test.java).
-Class Names and Identifiers
-By convention, class names begin with a capital letter and capitalize the first letter of each word they include (e.g., SampleClassName). A class name is an identifier—a series of characters consisting of letters, digits, underscores (_) and dollar signs ($) that does not begin with a digit and does not contain spaces. Some valid identifiers are test, $value, _value, m_inputField1 and button7. The name 7button is not a valid identifier because it begins with a digit, and the name input field is not a valid identifier because it contains a space </p>
-<p> <span class="header_take_note_of">Line 5: Left Brace </span><br>
-A left brace (as in line 5), {, begins the body of every class declaration. A corresponding right brace (at line 11), }, must end each class declaration. Lines 6-10 are indented.</p>
-<p> <span class="header_take_note_of">Line 6&7: Declaring a method </span><br>
-Line 6 is an end-of-line comment indicating the purpose of lines 7-10 of the program. <span style="color: crimson;">Line 7</span>
-is the starting point of every Java application. The parentheses after the identifier main indicate that it's a program building block called a method. Java class declarations normally contain one or more methods. For a Java application, one of the methods must be called main and must be defined as shown in line 7; otherwise, the Java Virtual Machine (JVM) will not execute the application. Methods perform tasks and can return information when they complete their tasks. Keyword void indicates that this method will not return any information.
-<p><span class="header_take_note_of">Line 8: Left brace for method declaration </span><br>
-The left brace in line 8 begins the body of the method declaration. A corresponding right brace must end it (line 10).</p>
-</article>
-<summary class="code_summary">
-  <h3 style="margin: 10px;">Summary</h3>
-<table>
-  <thead style="text-align: left;"><tr><th>Character</th>
-  <th>Name</th>
-  <th>Description</th></tr></thead>
-  <tbody>
-    <tr><td>{}</td>
-    <td>Opening and closing braces</td>
-    <td>Denotes a block to enclose statements</td></tr>
-    <tr><td>()</td>
-    <td>Opening and closing paranthesis</td>
-    <td>Used with methods</td></tr>
-    <tr><td>[]</td>
-    <td>Opening and closing brackets</td>
-    <td>Denotes an array.</td></tr>
-    <tr><td>//</td>
-    <td>Double slashes</td>
-    <td>Precedes a comment line.</td></tr>
-    <tr><td>""</td>
-    <td>Opening and closing brackets.</td>
-    <td>enclosing a string i.e (sequence of characters).</td></tr>
-    <tr><td>;</td>
-    <td>Semicolon</td>
-    <td>mark the end of statements</td></tr>
-  </tbody>
-</table>
-</summary>
-</section>
-<section class="main-section" id="reading_from_the_console">
-  <header id="Reading_input_from_the_console">Reading Input from the Console</header>
-  <div class="text">
-    <p>Reading input from the console enables the program to accept input from the user. In java can the Scanner class is used for console input. Java uses System.out to refer to the standard output device and System.in to the standard input device. By default, the output device is the display monitor and the input device is the keyboard. To perform console output, you simply use the println method to display a primitive value or a string to the console. Console input is not directly supported in Java, but you can use the Scanner class to create an object to read input from System.in, as follows, Scanner input = new	Scanner(System.in); For instance</p>
-    <code>
+        <p><span class="header_take_note_of"> Line 3: Using Blank Lines </span><br>
+          Line 3 is a blank line. Blank lines, space characters and tabs make programs easier to read. Together, they're
+          known as whitespace (or whitespace). The compiler ignores white space.</p>
+        <p><span class="header_take_note_of"> Line 4: Declaring a Class </span><br>
+          Line 4 begins a class declaration for class test. Every Java program consists of at least one class that you
+          (the programmer) define. The class keyword introduces a class declaration and is immediately followed by the
+          class name (test). Keywords (sometimes called reserved words) are reserved for use by Java and are always
+          spelled with all lowercase letters.
+          NB: A public class must be placed in a file that has the same name as the class (in terms of both spelling and
+          capitalization) plus the .java extension; otherwise, a compilation error occurs. For example, public class
+          test must be placed in a file named test.java. The classname and filename must be the same (test.java).
+          Class Names and Identifiers
+          By convention, class names begin with a capital letter and capitalize the first letter of each word they
+          include (e.g., SampleClassName). A class name is an identifier—a series of characters consisting of letters,
+          digits, underscores (_) and dollar signs ($) that does not begin with a digit and does not contain spaces.
+          Some valid identifiers are test, $value, _value, m_inputField1 and button7. The name 7button is not a valid
+          identifier because it begins with a digit, and the name input field is not a valid identifier because it
+          contains a space </p>
+        <p> <span class="header_take_note_of">Line 5: Left Brace </span><br>
+          A left brace (as in line 5), {, begins the body of every class declaration. A corresponding right brace (at
+          line 11), }, must end each class declaration. Lines 6-10 are indented.</p>
+        <p> <span class="header_take_note_of">Line 6&7: Declaring a method </span><br>
+          Line 6 is an end-of-line comment indicating the purpose of lines 7-10 of the program. <span
+            style="color: crimson;">Line 7</span>
+          is the starting point of every Java application. The parentheses after the identifier main indicate that it's
+          a program building block called a method. Java class declarations normally contain one or more methods. For a
+          Java application, one of the methods must be called main and must be defined as shown in line 7; otherwise,
+          the Java Virtual Machine (JVM) will not execute the application. Methods perform tasks and can return
+          information when they complete their tasks. Keyword void indicates that this method will not return any
+          information.
+        <p><span class="header_take_note_of">Line 8: Left brace for method declaration </span><br>
+          The left brace in line 8 begins the body of the method declaration. A corresponding right brace must end it
+          (line 10).</p>
+      </article>
+      <summary class="code_summary">
+        <h3 style="margin: 10px;">Summary</h3>
+        <table>
+          <thead style="text-align: left;">
+            <tr>
+              <th>Character</th>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{}</td>
+              <td>Opening and closing braces</td>
+              <td>Denotes a block to enclose statements</td>
+            </tr>
+            <tr>
+              <td>()</td>
+              <td>Opening and closing paranthesis</td>
+              <td>Used with methods</td>
+            </tr>
+            <tr>
+              <td>[]</td>
+              <td>Opening and closing brackets</td>
+              <td>Denotes an array.</td>
+            </tr>
+            <tr>
+              <td>//</td>
+              <td>Double slashes</td>
+              <td>Precedes a comment line.</td>
+            </tr>
+            <tr>
+              <td>""</td>
+              <td>Opening and closing brackets.</td>
+              <td>enclosing a string i.e (sequence of characters).</td>
+            </tr>
+            <tr>
+              <td>;</td>
+              <td>Semicolon</td>
+              <td>mark the end of statements</td>
+            </tr>
+          </tbody>
+        </table>
+      </summary>
+    </section>
+    </section>
+    <section class="main-section" id="Displaying_text_with_printf">
+      <header id="Displaying_Text_with_printf">Displaying Text with printf</header>
+      <article>
+        <p>
+          The System.out.printf method (f means “formatted”) displays formatted data. each line of code after each
+          conditional statement
+          call specifies two arguments. When a method requires multiple arguments, they're placed in a
+          comma-separated list.</p>
+        <p>Method printf's first argument is a format string that may consist of fixed text and format specifiers. Fixed
+          text is
+          output by printf just as it would be by print or println. Each format specifier is a placeholder for a value
+          and
+          specifies the type of data to output. Format specifiers also may include optional formatting information.
+          Format
+          specifiers begin with a percent sign (%) followed by a character that represents the data type. For example,
+          the
+          format
+          specifier %s is a placeholder for a string.the format
+          specifier %d is a placeholder for an integer <small>e.t.c...</small>
+          each followed by a newline character. At the first format specifier's position, printf substitutes the value
+          of
+          the
+          first argument after the format string. At each subsequent format specifier's position, printf substitutes the
+          value of
+          the next argument.</p>
+
+      </article>
+      <summary class="code_summary">
+        <h3 style="margin: 10px;">Escape sequence</h3>
+        <table>
+          <thead style="text-align: left;">
+            <tr>
+              <th style="width: 30%;">Escape sequence</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> \n </td>
+              <td>Newline. position the screen cursor at the beginning of the next line.
+              </td>
+            </tr>
+            <tr>
+              <td> \t </td>
+              <td>Horizontal tab. move the screen cursor to the next tab stop Carriage retutn. Position the screen
+                cursor at the beginning of the current line--do not advance to the next line. Any characters previously
+                output on that line.
+              </td>
+            </tr>
+            <tr>
+              <td>\\</td>
+              <td>Used to print backslash character</td>
+            </tr>
+            <tr>
+              <td>\"</td>
+              <td>Double quote. Used to print a double-quote character.For example,<br> System.out.println("\"in
+                quotes\"");<br>output: "in quotes".</td>
+            </tr>
+          </tbody>
+        </table>
+      </summary>
+    </section>
+    <section class="main-section" id="Reading_input_from_the_console">
+      <header id="Reading_input_from_the_console">Reading Input from the Console</header>
+      <div class="text">
+        <p>Reading input from the console enables the program to accept input from the user. In java can the Scanner
+          class is used for console input. Java uses System.out to refer to the standard output device and System.in to
+          the standard input device. By default, the output device is the display monitor and the input device is the
+          keyboard. To perform console output, you simply use the println method to display a primitive value or a
+          string to the console. Console input is not directly supported in Java, but you can use the Scanner class to
+          create an object to read input from System.in, as follows, Scanner input = new Scanner(System.in); For
+          instance</p>
+        <code class="code">
 <span class="comment">// Addition program that display the sum of two number</span> 
 import <span class="keyword">java</span>.<span style="color: crimson;">util</span>.<span class="keyword">Scanner</span>;
 
@@ -354,11 +671,13 @@ public class Addition {
         <span class="keyword">int</span>  number2;<span class="comment">// second number to add</span> 
         <span class="keyword">int</span>  sum;<span class="comment">// sum of number1 and number2</span> 
     </code>
-    <p>
-The syntax new Scanner(System.in) creates an object of the Scanner type. The syntax
-Scanner input declares that input is a variable whose type is Scanner. The whole line
-Scanner input = new Scanner(System.in) creates a Scanner object and assigns its reference to the variable input. An object may invoke its methods. To invoke a method on an object is to ask the object to perform a task. You can invoke the nextDouble() method to read a double value as follows:</p>
-<code>
+        <p>
+          The syntax new Scanner(System.in) creates an object of the Scanner type. The syntax
+          Scanner input declares that input is a variable whose type is Scanner. The whole line
+          Scanner input = new Scanner(System.in) creates a Scanner object and assigns its reference to the variable
+          input. An object may invoke its methods. To invoke a method on an object is to ask the object to perform a
+          task. You can invoke the nextDouble() method to read a double value as follows:</p>
+        <code class="code" style="border-top-left-radius: 0;border-top-right-radius: 0;">
         System.out.print("Enter first integer: ");<span class="comment"> // prompt</span>
         number1 = input. <span class="keyword">nextInt()</span>;<span class="comment"> // read first number from user</span>
 
@@ -369,36 +688,391 @@ Scanner input = new Scanner(System.in) creates a Scanner object and assigns its 
         System.out.printf("Sum is: %d\n ", sum );<span class="comment">// prompt</span>
     }<span class="comment">// end method main</span>
 } <span class="comment">//end class Addition</span>
-</code><p>Output:</p>
-<code class="console">
+</code><br>
+        <code class="console">
 Enter first integer: 23
 Enter second integer: 76
 Sum is: 99
 </code>
-    <summary class="code_summary">
-  <h3 style="margin: 10px;">Methods  for scanner object</h3>
-<table style="width: fit-content;">
-  <thead style="text-align: left;"><tr><th>Method</th>
-  <th>Description</th></tr></thead>
-  <tbody>
-    <tr><td>nextByte()</td>
-    <td>reads a number of the byte type.</td></tr>
-    <tr><td>nextShort()</td>
-    <td>reads a integer of the short type.</td></tr>
-    <tr><td>nextInt()</td>
-    <td>reads a integer of the int type.</td></tr>
-    <tr><td>nextLong()</td>
-      <td>reads a number of the long type.</td></tr>
-      <tr><td>nextFloat()</td>
-        <td>reads a number of the float type.</td></tr>
-    <tr><td>nextDouble()</td>
-    <td>reads a number of the double type.</td></tr>
-  </tbody>
-</table>
-</summary>
-  </div>
-</section>
-</main>
+        <summary class="code_summary">
+          <h3 style="margin: 10px;">Methods for scanner object</h3>
+          <table style="width: fit-content;">
+            <thead style="text-align: left;">
+              <tr>
+                <th>Method</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>nextByte()</td>
+                <td>reads a number of the byte type.</td>
+              </tr>
+              <tr>
+                <td>nextShort()</td>
+                <td>reads a integer of the short type.</td>
+              </tr>
+              <tr>
+                <td>nextInt()</td>
+                <td>reads a integer of the int type.</td>
+              </tr>
+              <tr>
+                <td>nextLong()</td>
+                <td>reads a number of the long type.</td>
+              </tr>
+              <tr>
+                <td>nextFloat()</td>
+                <td>reads a number of the float type.</td>
+              </tr>
+              <tr>
+                <td>nextDouble()</td>
+                <td>reads a number of the double type.</td>
+              </tr>
+            </tbody>
+          </table>
+        </summary>
+      </div>
+    </section>
+    <section class="main-section" id="Memory_Concepts">
+      <header id="Memory_Concepts">Memory Concepts</header>
+      <article>
+        <p>Variable names such as number1, number2 and sum actually correspond to locations in the
+          computer's memory. Every variable has a name, a type, a size (in bytes) and a value.
+          In the addition program of Fig. 2.7, when the following statement (line 18) executes: <br>
+          number1 = input. <span style="color: blue;">nextInt()</span>;<span style="color: green;">// read first number
+            from
+            user</span> <br>
+          The number typed by the user is placed into a memory location corresponding to the name
+          number1. Suppose that the user enters 45. The computer places that integer value into location number1,
+          replacing the previous value (if any) in that location. The previous value is lost</p>
+        <p>When the statement <b>input.nextInt();</b> executes, suppose that the user enters 72. The computer places
+          that
+          integer value into
+          location number2.</p>
+      </article>
+    </section>
+    <section class="main-section" id="Equality_and_Relational_Operators">
+      <header id="Equality_and_Relational_Operators">Equality and Relational Operators</header>
+      <article>
+        <p>
+          <span class="header_take_note_of">Decision Making</span><br>
+        <p>A condition is an expression that can be true or false. This section introduces Java's if
+          selection statement, which allows a program to make a decision based on a condition's
+          value. For example, the condition “grade is greater than or equal to 60” determines whether a student passed a
+          test.</p>
+        <p>
+          If
+          the condition in an if statement is true, the body of the if
+          statement executes. If the condition is false, the body does not execute. We'll see an example shortly.
+          Conditions in if statements can be formed by using the equality operators (== and
+          !=) and relational operators (>, <,>= and <=).Both equality operators have the same level of precedence, which
+              is lower than that of the relational operators.</p>
+              <p>The equality operators associate from left to right. The relational operators all have the
+                same level of precedence and also associate from left to right.
+                The code <a href="#code" style="color: blue;">below</a> uses six if statements to compare two integers
+                input by the user. If the
+                condition in any of these if statements is true, the statement associated with that if statement
+                executes;
+                otherwise,
+                the statement is skipped. We use a Scanner to input the integers
+                from the user and store them in variables number1 and number2. The program compares
+                the numbers and displays the results of the comparisons that are true.</p><br>
+              <summary class="code_summary">
+                <table>
+                  <thead style="text-align: left;">
+                    <tr>
+                      <th>Standard algebraic equality or relational operator</th>
+                      <th>java equality or relational operator</th>
+                      <th>Sample java condition</th>
+                      <th>Meaning of java condition</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i>Equality operators</i><br> = </td>
+                      <td>==</td>
+                      <td>x == y</td>
+                      <td>x is equal to y</td>
+                    </tr>
+                    <tr>
+                      <td>≠</td>
+                      <td>!=</td>
+                      <td>x != y</td>
+                      <td>x is not equal to y</td>
+                    </tr>
+                    <tr>
+                      <td><i>Relational operators</i><br> > </td>
+                      <td>></td>
+                      <td>x > y</td>
+                      <td>x is greater y</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        < </td>
+                      <td>
+                        < </td>
+                      <td>x < y</td>
+                      <td>x is less than y</td>
+                    </tr>
+                    <tr>
+                      <td>≥</td>
+                      <td> >= </td>
+                      <td>x >= y</td>
+                      <td>x is greater than or equal to y</td>
+                    </tr>
+                    <tr>
+                      <td>≤</td>
+                      <td>
+                        <= </td>
+                      <td>x <= y</td>
+                      <td>x is less than or equal to y</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </summary>
+              <code class="code" id="code">
+              <span class="comment"> //Fig 2.1: Comparison.java
+              // Comparison integers using if statements, relational operators
+              // and equality operators.</span>
+              import java.<span style="color: crimson;">util</span>.Scanner;<span class="comment"> // program uses class Scanner</span>
+              
+              public class Comparison {
+              <span class="comment">// main method begins execution of java application</span>
+              public static void main(<span class="keyword">String[] args</span>) {
+              <span class="comment">// create a scanner to obtain input from the command line.</span>
+              Scanner input = new Scanner(System.in);
+              
+              <span class="keyword">int</span> number1; <span class="comment">// first number to compare</span>
+              <span class="keyword">int</span> number2; <span class="comment">// second number to compare</span>
+              
+              System.out.print("Enter first integer: "); <span class="comment">// prompt</span>
+              number1 = input.<span class="keyword">nextInt()</span>; <span class="comment">// read first number from user,</span>
+              
+              System.out.print("Enter second integer: "); <span class="comment">// prompt</span>
+              number2 = input. <span class="keyword">nextInt()</span>;<span class="comment">// read second number from user</span>
+              
+              if ( number1 == number2 )
+              System.out.printf( "%d == %d\n", number1, number2);
+              
+              if ( number1 != number2 )
+              System.out.printf( "%d != %d\n", number1, number2);
+              
+              if ( number1 <= number2 )
+               System.out.printf( "%d <= %d\n" , number1, number2);
+              else
+                System.out.printf( "%d >= %d\n", number1, number2);
+
+              }<span class="comment">// end method main</span>
+        }<span class="comment">//end class Comparison</span>
+            </code><br>
+              <code class="console">
+              Enter first integer: 777
+              Enter second integer: 777
+              777 == 777
+              777 <= 777
+              777 >= 777
+            </code><br>
+              <code class="console">
+              Enter first integer: 1000
+              Enter second integer: 2000
+              1000 != 2000
+              1000 <= 2000
+            </code><br>
+              <code class="console">
+              Enter first integer: 2000
+              Enter second integer: 1000
+              2000 != 1000
+              2000 >= 1000
+            </code>
+      </article>
+    </section>
+    <section class="main-section" id="Assignment,increment_and_decrement_operators">
+      <header id="Assignment,increment_and_decrement_operators">Assignment, increment and decrement operators</header>
+      <article>
+        <p>
+          <span class="header_take_note_of">Augmented assignment</span><br>
+        <p>The operators +, -, *, /, and % can be combined with the assignment operator to form augmented operators.
+          Very often the current value of a variable is used, modified, and then reassigned back to the same variable.
+          For
+          example, the following statement increases the variable count by 1:
+          count = count + 1;</p>
+        <p>
+          Java allows you to combine assignment and addition operators using an augmented (or
+          compound) assignment operator. For example, the preceding statement can be written as
+          count += 1;</p>
+        <p>The += is called the addition assignment operator. Table below shows other augmented
+          assignment operators.</p><br>
+        <summary class="code_summary">
+          <table>
+            <thead style="text-align: left;">
+              <tr>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Example</th>
+                <th>Equivalent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>+= </td>
+                <td>Addition assignment</td>
+                <td>i += 8</td>
+                <td>i = i + 8</td>
+              </tr>
+              <tr>
+                <td>-=</td>
+                <td>Subtraction assignment</td>
+                <td>i -= 8</td>
+                <td>i = i - 8</td>
+              </tr>
+              <tr>
+                <td>*=</td>
+                <td>Multiplication assignment</td>
+                <td>i *= 8</td>
+                <td>i = i * 8</td>
+              </tr>
+              <tr>
+                <td>
+                  /= </td>
+                <td>
+                  Division assignment</td>
+                <td>i /= 8</td>
+                <td>i = i / 8</td>
+              </tr>
+              <tr>
+                <td>%=</td>
+                <td> Remainder assignment </td>
+                <td>i %= 8</td>
+                <td>i = i % 8</td>
+              </tr>
+            </tbody>
+          </table>
+        </summary>
+        <p style="white-space: pre-line;"><span class="header_take_note_of">Increment and Decrement Operators</span><br>
+          The ++ and -- are two shorthand operators for incrementing and decrementing a variable by 1. These are handy
+          because
+          that's often how much the value needs to be changed in many programming tasks. For example, the following code
+          increments i
+          by 1 and decrements j by 1.
+          int i = 3, j = 3;
+          i++; // i becomes 4
+          j--; // j becomes 2</p>
+        <p style="white-space: pre-line; margin-top: 0;">
+          i++ is pronounced as i plus plus and i-- as i minus minus. These operators are known as
+          <b> postfix increment</b> (or postincrement) and <b> postfix decrement</b> (or postdecrement), because the
+          operators ++ and -- are placed after the variable. These operators can also be placed before
+          the variable. For example,
+          int i = 3, j = 3;
+          ++i; // i becomes 4
+          --j; // j becomes 2
+        </p>
+        <p style="white-space: pre-line; margin-top: 0;">
+          ++i increments i by 1 and --j decrements j by 1. These operators are known as <b>prefix
+            increment</b> (or preincrement) and <b>prefix decrement</b> (or predecrement).
+          As you see, the effect of i++ and ++i or i-- and --i are the same in the preceding examples.
+          NB: However, their effects are different when they are used in statements that do more than just increment and
+          decrement.
+        </p>
+        <summary class="code_summary">
+          <h3 style="margin: 10px;">Increment and Decrement Operators</h3>
+          <table>
+            <thead style="text-align: left;">
+              <tr>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Example (assume i = 1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>++var</td>
+                <td>preincrement</td>
+                <td>increment var by 1, and use the new var value in the statement</td>
+                <td>int j = ++i <br>
+                  <span class="comment">//j is 2, i is 2</span>
+                </td>
+              </tr>
+              <td>var++</td>
+              <td>postincrement</td>
+              <td>increment var by 1, but use the new var value in the statement</td>
+              <td>int j = i++ <br>
+                <span class="comment">//j is 1, i is 2</span>
+              </td>
+              </tr>
+              <td>--var</td>
+              <td>predecrement</td>
+              <td>Decrement var by 1, and use the new var value in the statement</td>
+              <td>int j = --i <br>
+                <span class="comment">//j is 0, i is 0</span>
+              </td>
+              </tr>
+              <td>var--</td>
+              <td>postdecrement</td>
+              <td>Decrement var by 1, and use the new var value in the statement</td>
+              <td>int j = i-- <br>
+                <span class="comment">//j is 1, i is 0</span>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </summary>
+      </article>
+    </section>
+    <section class="main-section" id="Loops_in_Java">
+      <header id="Loops in Java">Loops in Java</header>
+      <article>
+        <p>Looping in programming languages is a feature which facilitates the execution of a set of instructions/functions repeatedly while some condition evaluates to true. Java provides three ways for executing the loops. While all the ways provide similar basic functionality, they differ in their syntax and condition checking time.</p>
+   <p>java provides Three types of Conditional statements this second  type is loop statement .</p>
+   <ol>
+    <li><p><b> while loop:</b> A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement. </p> <br>Syntax:<code class="code">
+      while (boolean condition)
+{
+   loop statements...
+}
+    </code> </li>
+    <li><p><b>for loop:</b>or loop provides a concise way of writing the loop structure. Unlike a while loop, a for statement consumes the initialization, condition and increment/decrement in one line thereby providing a shorter, easy to debug structure of looping. </p><br>Syntax
+    <code class="code">
+      for (initialization condition; testing condition;increment/decrement)
+{
+    statement(s)
+}
+    </code></li>
+    <li><p>do while: <b></b>do while loop is similar to while loop with only difference that it checks for condition after executing the statements, and therefore is an example of <i> Exit Control Loop.</i></p><br>Syntax
+    <code>do
+{
+    statements..
+}
+while (condition);</code></li>
+   </ol>
+   <p>Read more on loops on <a style="color: green;text-decoration: underline;" href="https://www.geeksforgeeks.org/loops-in-java/"><b>geeks fo geeks.</b></a></p>
+      </article>
+    </section>
+    <h1>THANK YOU.</h1>
+    <section class="main-section" id="Reference"></section>
+      <footer> <header id="Reference">Reference</header>
+        <p>Reference from the NOTE INTENDED FOR A FIRST COURSE IN OBJECTIVE-Oriented programming language with java at <a style="color: green;" href="https://www.federalpolyilaro.edu.ng">federal polytechnic Ilaro</a>, Ogun state <br>Nigeria.</p>
+  </footer>
+  </main>
+          <script>
+         const mai =  document.getElementById('main-doc');
+        const navg = document.querySelector('.chevrun_up');
+        const show_up = navg.parentElement.nextElementSibling;
+        const ico = navg.firstElementChild;
+        navg.onclick = () => {
+          console.log(ico);
+          ico.classList.toggle('fa-chevron-up');
+          ico.classList.toggle('fa-chevron-down');
+          show_up.classList.toggle('show_up');
+          show_up.classList.toggle('relative_container');
+        }
+          window.onscroll = ()=>{
+          navg.parentElement.parentElement.style.position = 'fixed';
+          mai.style.marginTop += '55px';
+      }
+        console.log(show_up);
+      </script>
 </body>
+
 </html>
 <!-- ⦁ -->
