@@ -80,12 +80,15 @@ p {
   margin: 20px 0 0 30px;
   font-size: 23px;
 }
-.main-section ul,.main-section ol{
+
+.main-section ul,
+.main-section ol {
   margin: 25px 50px 0 60px;
   font-size: 15px;
   line-height: 1.5em;
   color: rgb(3, 13, 35);
 }
+
 code {
   display: block;
   width: 75%;
@@ -170,13 +173,16 @@ td:first-child {
   Body {
     flex-direction: column;
   }
-  .fixed{
+
+  .fixed {
     margin-top: 55px;
   }
-.header_take_note_of {
-  font-size: 17px;
-  text-decoration: underline;
-}
+
+  .header_take_note_of {
+    font-size: 17px;
+    text-decoration: underline;
+  }
+
   header .chevrun_up {
     display: block;
     margin-right: 30px;
@@ -190,7 +196,11 @@ td:first-child {
   .contain_nav nav {
     width: 100%;
   }
-nav{position: unset;}
+
+  nav {
+    position: unset;
+  }
+
   nav header {
     background-color: white;
     display: flex;
@@ -223,9 +233,9 @@ nav{position: unset;}
   }
 
   .show_up a {
-      padding: 10px;
-      color: rgb(3, 13, 35);
-    }
+    padding: 10px;
+    color: rgb(3, 13, 35);
+  }
 
   main {
     height: fit-content;
