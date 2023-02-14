@@ -57,6 +57,7 @@ nav .relative_container {
 }
 
 nav .relative_container a {
+  font-size: 17px;
   padding: 17px;
   color: rgb(3, 13, 35);
 }
@@ -79,18 +80,12 @@ p {
   margin: 20px 0 0 30px;
   font-size: 23px;
 }
-
-.main-section ol,
-li {
-  margin: 15px 10px 5px 0;
-}
-
-.main-section ul,
-li{
-  margin: 15px 35px 10px 30px;
+.main-section ul,.main-section ol{
+  margin: 25px 50px 0 60px;
+  font-size: 15px;
   line-height: 1.5em;
+  color: rgb(3, 13, 35);
 }
-
 code {
   display: block;
   width: 75%;
@@ -153,7 +148,7 @@ td:first-child {
   color: rgb(46, 46, 237);
 }
 
-footer {
+#Reference {
   font-family: monospace;
   text-transform: uppercase;
   text-align: center;
@@ -163,11 +158,11 @@ footer {
   background-color: rgb(181, 175, 175);
 }
 
-footer p {
+#Reference p {
   color: aliceblue;
 }
 
-footer p a {
+#Reference p a {
   text-decoration: underline;
 }
 
@@ -175,7 +170,13 @@ footer p a {
   Body {
     flex-direction: column;
   }
-
+  .fixed{
+    margin-top: 55px;
+  }
+.header_take_note_of {
+  font-size: 17px;
+  text-decoration: underline;
+}
   header .chevrun_up {
     display: block;
     margin-right: 30px;
@@ -239,7 +240,7 @@ nav{position: unset;}
     font-size: .7em;
   }
 
-  footer {
+  #Reference {
     width: 100%;
   }
 }
